@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/styletest.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  </head>
+  <body>
+    <h1>
+      Welcome to SpaceInvaders.html
+    </h1>
+    <h2>
+      keys "a,d,space"
+    </h2>
+    <canvas id="SpaceInvaders" width="600" height="600" style="border:1px solid #000000;"></canvas>
+  </body>
+  <script src="{% static 'scripts/Spaceinvaders.js' %}"></script>
+</html>

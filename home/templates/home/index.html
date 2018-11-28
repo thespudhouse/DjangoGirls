@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h2>Ciarán's mighty magic website</h2>
+        <p>High quality magic programing wizard</p>
+      </div>
+      <div class="row">
+        <article class="col-md-6 col-lg-3">
+          <div class="card">
+            <img src="{% static 'Images\SpaceInvaders.PNG' %}" alt="Space invaders images" class="img-fluid">
+            <div class="card-body">
+              <h3 class="card-title">Space invaders</h3>
+              <p class="card-text">Here is a space invaders built in canvis</p>
+              <p><a href="{% url 'home_spaceinvaders' %}">Spaceinvaders</a></p>
+            </div>
+          </div>
+        </article>
+        <article class="col-md-6 col-lg-3">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">My youtube channel</h3>
+              <p class="card-text">Mostly so warhammer online battles and modding tutorials</p>
+              <p><a href="{% url 'home_youtube' %}">View video selection here.</a></p>
+            </div>
+          </div>
+        </article>
+        <article class="col-md-6 col-lg-3">
+          <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">blog</h3>
+                <p class="card-text">Blog created using Django</p>
+                <p><a href="{% url 'post_list' %}">here is a blog created using Django</a></p>
+            </div>
+          </div>
+        </article>
+        <article class="col-md-6 col-lg-3">
+          <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Under construction</h3>
+                <p class="card-text">Under construction</p>
+                <p><a href="#">Please wait</a></p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
