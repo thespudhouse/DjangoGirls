@@ -13,6 +13,13 @@
   <body>
     <div class="container">
       <div class="jumbotron">
+        {% if user.is_authenticated %}
+        <p class="top-menu" style="color:black">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+  
+        {% else %}
+          <a href="{% url 'signup' %}" class="btn btn-primary">signup</a>
+          <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+        {% endif %}
         <h2>Ciarán's mighty magic website</h2>
         <p>High quality magic programing wizard</p>
       </div>
@@ -23,7 +30,7 @@
             <div class="card-body">
               <h3 class="card-title">Space invaders</h3>
               <p class="card-text">Here is a space invaders built in canvis</p>
-              <p><a href="{% url 'home_spaceinvaders' %}">Spaceinvaders</a></p>
+              <p><a href="{% url 'home_spaceinvaders' %}" class="btn btn-primary">Spaceinvaders</a></p>
             </div>
           </div>
         </article>
@@ -32,7 +39,7 @@
             <div class="card-body">
               <h3 class="card-title">My youtube channel</h3>
               <p class="card-text">Mostly so warhammer online battles and modding tutorials</p>
-              <p><a href="{% url 'home_youtube' %}">View video selection here.</a></p>
+              <p><a href="{% url 'home_youtube' %}" class="btn btn-primary">View video selection here.</a></p>
             </div>
           </div>
         </article>
@@ -41,7 +48,7 @@
             <div class="card-body">
                 <h3 class="card-title">blog</h3>
                 <p class="card-text">Blog created using Django</p>
-                <p><a href="{% url 'post_list' %}">here is a blog created using Django</a></p>
+                <p><a href="{% url 'post_list' %}" class="btn btn-primary">here is a Django blog</a></p>
             </div>
           </div>
         </article>
@@ -50,7 +57,7 @@
             <div class="card-body">
                 <h3 class="card-title">Under construction</h3>
                 <p class="card-text">Under construction</p>
-                <p><a href="#">Please wait</a></p>
+                <p><a href="#" class="btn btn-primary">Please wait</a></p>
             </div>
           </div>
         </article>

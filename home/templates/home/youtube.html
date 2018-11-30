@@ -1,40 +1,25 @@
+{% extends 'home/base.html' %}
 {% load static %}
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
-    <!-- static CSS -->
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <header class="col">
-          <h1>Rements of Quetza</h1>
-        </header>
-      </div>
-      {% for video in videos %}
-      <div class="row">
-        <article class="col">
-          <h2 class="date">created: {{ video.created_date|date:'d-m-Y' }}</h2>
-            <div class="media">
-              <iframe width="560" height="315" src="{{video.URL}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="media-body">
-                    <h3>{{video.title}}</h3>
-                    <p>{{video.text}}</p>
-                </div>
+{% block content %}
+<div class="container">
+  <div class="row">
+    <header class="col">
+      <h1>Rements of Quetza</h1>
+    </header>
+  </div>
+  {% for video in videos %}
+  <div class="row">
+    <article class="col">
+      <h2 class="date">created: {{ video.created_date|date:'d-m-Y' }}</h2>
+        <div class="media">
+          <iframe width="560" height="315" src="{{video.URL}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="media-body">
+                <h3>{{video.title}}</h3>
+                <p>{{video.text}}</p>
             </div>
-        </article>
-      </div>
-    {% endfor %}
-    </div>
-  </body>
-</html>
+        </div>
+    </article>
+  </div>
+{% endfor %}
+</div>
+{% endblock %}
