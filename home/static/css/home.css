@@ -63,3 +63,12 @@
 .card{
     margin-bottom: 2rem;
 }
+
+.errorlist{
+    color:red;
+}
+
+.signup li, .helptext{
+    font-size: 11px;
+    color: #999;
+}
