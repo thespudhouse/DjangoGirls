@@ -18,10 +18,7 @@ def home_youtube(request):
 
 def home_spaceinvaders(request):
     return render(request, 'home/spaceinvaders.html', {})
-
-from django.contrib.auth import login, authenticate
-from django.shortcuts import render, redirect
-
+    
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
